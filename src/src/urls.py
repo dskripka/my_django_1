@@ -1,4 +1,4 @@
-"""src URL Configuration
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,13 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapp.views import index1, index2
 
-from django.contrib import admin
-from django.urls import path
-from myapp.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', index, name='index'),
-
+    path('index1/', index1),
+    path('index2/', index2),
 ]
