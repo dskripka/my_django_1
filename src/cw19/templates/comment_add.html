@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form action="{% url 'comment_add' %}" method="POST">
+{% extends 'base.html' %}
 
-    <p>
-        Firstname
-        <input type="text" name="firstname">
-    </p>
-    <p>
-        Lastname
-        <input type="text" name="lastname">
-    </p>
-    <p>
-        Age
-        <input type="number" name="age">
-    </p>
-    <p>
-        Comment
-        <textarea name="comment"></textarea>
-    </p>
-    <br><input type="submit" name="submit", value="Post">
-</body>
-</html>
+{% block title %}Title{% endblock %}
+
+{% block content %}
+<form action="{% url 'comment_add' %}" method="POST">
+    {{ form.as_p }}
+    <br><input type="submit" name="submit" value="Post">
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'hw_20/base_hw_20.html' %}
+
+{% block title %}
+    edit
+{% endblock %}
+
+
+{% block content %}
+    <form action="{% url 'car_edit' car_id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Change" class="btn btn-primary">
+
+    </form>
+
+
+{% endblock %}

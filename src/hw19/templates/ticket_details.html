@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Ticket Form{% endblock %}
+
+{% block content %}
+    <p>
+        <br>{{ data.fullname }}
+        <br>{{ data.from_place }}
+        <br>{{ data.to_place }}
+        <br>{{ data.amount_of_people }}
+        <br>{{ data.price }}
+        <br>{{ data.date }}
+    </p>
+{% endblock %}
